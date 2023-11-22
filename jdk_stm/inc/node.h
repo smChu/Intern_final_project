@@ -16,7 +16,7 @@ public:
   ~Node();
   void run();
 
-  float _x, _z;
+
 
 private:
   string portname = "ttyUSB0";

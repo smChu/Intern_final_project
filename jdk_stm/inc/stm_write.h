@@ -10,6 +10,9 @@ private:
 public:
   StmPacketGenerator();
   ~StmPacketGenerator();
+  // 11/22
+  float _x, _z;
+  // 11/22
 
   void divideByte(vector<uint8_t> &packet, int value, int length);
   void update_header(vector<uint8_t> &packet);

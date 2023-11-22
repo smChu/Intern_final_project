@@ -28,11 +28,11 @@ void StmPacketGenerator::update_header(vector<uint8_t> &packet)
 
 void StmPacketGenerator::update_data(vector<uint8_t> &packet)
 {
-  //Make your packet
+  // Make your packet
   srand((unsigned int)time(NULL));
   packet.push_back(rand() % 100);
-  packet.push_back(rand() % 100);
-  packet.push_back(rand() % 100);
+  packet.push_back(_x);
+  packet.push_back(_z);
 }
 
 void StmPacketGenerator::update_crc(vector<uint8_t> &data_blk_ptr)

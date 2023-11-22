@@ -22,7 +22,7 @@ public:
   Test(Serial *s, bool *serialRead, mutex *m, queue<uint8_t> *readByte);
   ~Test();
 
-  float _x, _z;
+  //float _x, _z;
 
   void myCallBack(const geometry_msgs::TwistConstPtr& msg);
   void Algorithm_Test();

@@ -18,10 +18,8 @@
 #include <sensor_msgs/Joy.h>
 #include <std_msgs/String.h>
 #include <geometry_msgs/Twist.h>
-//#include <sub_pub/MsgTutorial.h>
 
 using namespace std;
 using namespace serial;
-//using namespace sub_pub;
 
 #endif // HEADER_H
