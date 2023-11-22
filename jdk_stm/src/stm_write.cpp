@@ -20,9 +20,9 @@ void StmPacketGenerator::divideByte(vector<uint8_t> &packet, int value, int leng
 
 void StmPacketGenerator::update_header(vector<uint8_t> &packet)
 {
-  packet.push_back(0xFF); 
-  packet.push_back(0xFF);
-  packet.push_back(0xFD);
+  packet.push_back(0xFF);//255
+  packet.push_back(0xFF);//255
+  packet.push_back(0xFD);//253
   packet.push_back(0x00);
 }
 
@@ -30,9 +30,12 @@ void StmPacketGenerator::update_data(vector<uint8_t> &packet)
 {
   // Make your packet
   srand((unsigned int)time(NULL));
+  //packet.push_back(rand() % 100);
+  //packet.push_back(rand() % 100);
   packet.push_back(rand() % 100);
   packet.push_back(_x);
   packet.push_back(_z);
+  cout << _x << "//" << _z << endl;
 }
 
 void StmPacketGenerator::update_crc(vector<uint8_t> &data_blk_ptr)

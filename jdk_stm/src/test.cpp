@@ -17,9 +17,9 @@ Test::~Test()
 
 void Test::myCallBack(const geometry_msgs::TwistConstPtr& msg)
 {
-  stmPacketGenerator._x = msg->linear.x;
-  stmPacketGenerator._z = msg->angular.z;
-  
+  //-1~1 -> 0~400
+  stmPacketGenerator._x = (int)(100 * (msg->linear.x + 1));
+  stmPacketGenerator._z = (int)(100 * (msg->angular.z + 1));
 }
 
 void Test::Algorithm_Test()
