@@ -32,10 +32,11 @@ void StmPacketGenerator::update_data(vector<uint8_t> &packet)
   srand((unsigned int)time(NULL));
   //packet.push_back(rand() % 100);
   //packet.push_back(rand() % 100);
-  packet.push_back(rand() % 100);
-  packet.push_back(_x);
-  packet.push_back(_z);
-  cout << _x << "//" << _z << endl;
+  //packet.push_back(rand() % 100);
+  packet.push_back(_z);//left data[4]
+  packet.push_back(_x);//right data[5]
+
+  cout << _z << "//" << _x << endl;
 }
 
 void StmPacketGenerator::update_crc(vector<uint8_t> &data_blk_ptr)

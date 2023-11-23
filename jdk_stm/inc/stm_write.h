@@ -11,8 +11,8 @@ public:
   StmPacketGenerator();
   ~StmPacketGenerator();
   // 11/22
-  int _x = 100;
-  int _z = 100;
+  int _x = 20;
+  int _z = 20;
   // 11/22
 
   void divideByte(vector<uint8_t> &packet, int value, int length);
