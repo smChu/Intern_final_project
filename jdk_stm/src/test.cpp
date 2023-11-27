@@ -15,12 +15,17 @@ Test::~Test()
 
 }
 
-void Test::myCallBack(const geometry_msgs::TwistConstPtr& msg)
-{
-  //-1~1 -> 0~200
-  stmPacketGenerator._x = (int)(20 * (msg->linear.x + 1));
-  stmPacketGenerator._z = (int)(20 * (msg->angular.z + 1));
-}
+// void Test::myCallBack(const joystick_mani::mydmxelConstPtr& msg)
+// {
+//   //-1~1 -> 0~200
+//   // stmPacketGenerator._x = (int)(10 * (msg->linear.x + 1));
+//   // stmPacketGenerator._z = (int)(10 * (msg->angular.z + 1));
+//   stmPacketGenerator.ID_1 = msg->moter1;
+//   stmPacketGenerator.ID_2 = msg->moter2;
+//   stmPacketGenerator.ID_3 = msg->moter3;
+//   stmPacketGenerator.ID_5 = msg->moter4;
+//   stmPacketGenerator.ID_6 = msg->moter5;
+// }
 
 void Test::Algorithm_Test()
 {

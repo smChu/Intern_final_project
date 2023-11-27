@@ -1,20 +1,25 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 2.8.3)
 project(jdk_stm)
 
 find_package(catkin REQUIRED COMPONENTS
+  message_generation
   roscpp
   std_msgs
   serial
   geometry_msgs
-  #sub_pub
+  #joystick_mani
+ 
 )
+#add_message_files(FILES mydmxel.msg)
+#generate_messages(DEPENDENCIES std_msgs)
 
 catkin_package(
    INCLUDE_DIRS inc
    LIBRARIES ${PROJECT_NAME}
-   CATKIN_DEPENDS roscpp std_msgs geometry_msgs
-   #sub_pub
+   CATKIN_DEPENDS roscpp std_msgs geometry_msgs #joystick_mani
+   
 )
+
 
 include_directories(inc ${catkin_INCLUDE_DIRS})
 

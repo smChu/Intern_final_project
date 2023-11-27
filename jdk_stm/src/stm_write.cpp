@@ -18,6 +18,16 @@ void StmPacketGenerator::divideByte(vector<uint8_t> &packet, int value, int leng
   }
 }
 
+void StmPacketGenerator::divideFloat(vector<uint8_t> &packet, float value)
+{
+  uint8_t *bytePtr = reinterpret_cast<uint8_t*>(&value);
+  
+  for(int i = 0; i < sizeof(float); i++)
+  {
+    packet.push_back(bytePtr[i]);
+  }
+}
+
 void StmPacketGenerator::update_header(vector<uint8_t> &packet)
 {
   packet.push_back(0xFF);//255
@@ -29,14 +39,16 @@ void StmPacketGenerator::update_header(vector<uint8_t> &packet)
 void StmPacketGenerator::update_data(vector<uint8_t> &packet)
 {
   // Make your packet
-  srand((unsigned int)time(NULL));
-  //packet.push_back(rand() % 100);
-  //packet.push_back(rand() % 100);
-  //packet.push_back(rand() % 100);
-  packet.push_back(_z);//left data[4]
-  packet.push_back(_x);//right data[5]
 
-  cout << _z << "//" << _x << endl;
+  // packet.push_back(_z);//left data[4]
+  // packet.push_back(_x);//right data[5]
+
+  divideByte(packet, ID_1, 2);
+  divideByte(packet, ID_2, 2);
+  divideByte(packet, ID_3, 2);
+  divideByte(packet, ID_5, 2);
+  divideByte(packet, ID_6, 2);
+  cout << ID_1<< "//" << ID_2<< "//" << ID_3<< "//" << ID_5<< "//" << ID_6 << endl;
 }
 
 void StmPacketGenerator::update_crc(vector<uint8_t> &data_blk_ptr)

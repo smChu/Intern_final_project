@@ -5,6 +5,7 @@
 #include "stm_read.h"
 #include "stm_write.h"
 
+
 class Test
 {
 private:
@@ -24,7 +25,7 @@ public:
 
   //float _x, _z;
 
-  void myCallBack(const geometry_msgs::TwistConstPtr& msg);
+  //void myCallBack(const geometry_msgs::TwistConstPtr& msg);
   void Algorithm_Test();
 
   Serial *s;

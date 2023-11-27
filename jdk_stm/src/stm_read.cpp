@@ -128,6 +128,7 @@ void StmPacketTranslator::readPacket(uint8_t byte)
     buffer[state] = byte;
 
     bufferCRC = update_crc(0, buffer, state-1);
+
     packetCRC = combineByte(buffer[CRC2-1], buffer[CRC2]);
 
     state = H1;
