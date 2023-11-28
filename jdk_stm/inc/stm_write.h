@@ -2,6 +2,7 @@
 #define STM_WRITE_H
 
 #include "header.h"
+#include <tutorial_msgs/mydmxel.h>
 
 class StmPacketGenerator
 {
@@ -13,12 +14,13 @@ public:
   // 11/22
   int _x;
   int _z;
-  int ID_1=1;
-  int ID_2=2;
-  int ID_3=3;
-  int ID_5=4;
-  int ID_6=5;
+  int ID_1=0;
+  int ID_2=0;
+  int ID_3=0;
+  int ID_5=0;
+  int ID_6=0;
   // 11/22
+  
 
   void divideByte(vector<uint8_t> &packet, int value, int length);
   void divideFloat(vector<uint8_t> &packet, float value);

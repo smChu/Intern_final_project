@@ -7,10 +7,10 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   serial
   geometry_msgs
-  #joystick_mani
+  tutorial_msgs
  
 )
-#add_message_files(FILES mydmxel.msg)
+
 #generate_messages(DEPENDENCIES std_msgs)
 
 catkin_package(
@@ -31,6 +31,10 @@ add_executable(${PROJECT_NAME}
   src/test.cpp)
 
 target_link_libraries(jdk_stm ${catkin_LIBRARIES})
+
+
+
+
 
 install(
     TARGETS ${PROJECT_NAME}

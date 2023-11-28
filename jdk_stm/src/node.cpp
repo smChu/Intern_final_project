@@ -11,7 +11,7 @@ Node::Node(int &argc, char **argv) : test(&s, &serialRead, &m, &readByte)
   ros::init(argc, argv, "jdk_stm");
   ros::NodeHandle n;
 
- // sub = n.subscribe("/cmd_vel", 10, &Test::myCallBack, &test);
+  sub = n.subscribe("/hello", 10, &Test::myCallBack, &test);
 
   // serial init
   s.setPort("/dev/" + portname);

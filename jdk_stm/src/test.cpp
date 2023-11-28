@@ -15,17 +15,17 @@ Test::~Test()
 
 }
 
-// void Test::myCallBack(const joystick_mani::mydmxelConstPtr& msg)
-// {
-//   //-1~1 -> 0~200
-//   // stmPacketGenerator._x = (int)(10 * (msg->linear.x + 1));
-//   // stmPacketGenerator._z = (int)(10 * (msg->angular.z + 1));
-//   stmPacketGenerator.ID_1 = msg->moter1;
-//   stmPacketGenerator.ID_2 = msg->moter2;
-//   stmPacketGenerator.ID_3 = msg->moter3;
-//   stmPacketGenerator.ID_5 = msg->moter4;
-//   stmPacketGenerator.ID_6 = msg->moter5;
-// }
+void Test::myCallBack(const tutorial_msgs::mydmxelConstPtr& msg)
+{
+  //-1~1 -> 0~200
+  // stmPacketGenerator._x = (int)(10 * (msg->linear.x + 1));
+  // stmPacketGenerator._z = (int)(10 * (msg->angular.z + 1));
+  stmPacketGenerator.ID_1 = msg->motor1;
+  stmPacketGenerator.ID_2 = msg->motor2;
+  stmPacketGenerator.ID_3 = msg->motor3;
+  stmPacketGenerator.ID_5 = msg->motor4;
+  stmPacketGenerator.ID_6 = msg->motor5;
+}
 
 void Test::Algorithm_Test()
 {

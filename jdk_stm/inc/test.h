@@ -4,6 +4,7 @@
 #include "header.h"
 #include "stm_read.h"
 #include "stm_write.h"
+#include <tutorial_msgs/mydmxel.h>
 
 
 class Test
@@ -25,7 +26,7 @@ public:
 
   //float _x, _z;
 
-  //void myCallBack(const geometry_msgs::TwistConstPtr& msg);
+  void myCallBack(const tutorial_msgs::mydmxelConstPtr& msg);
   void Algorithm_Test();
 
   Serial *s;
