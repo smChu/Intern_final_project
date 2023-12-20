@@ -4,7 +4,7 @@
 #include "header.h"
 #include "test.h"
 
-#define baudrate 57600 //manipulator = 1000000
+#define baudrate 1000000 //manipulator = 1000000
 #define rosrate 80 //manipulator = 200
 #define startdelay 0 //manipulator = 100000000
 #define readbuffersize 256 //manipulator = 1024
