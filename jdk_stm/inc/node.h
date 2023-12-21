@@ -24,6 +24,7 @@ private:
   Test test;
 
   ros::Subscriber sub;
+  ros::Subscriber sub_autorace;
 
   bool retry();
   void timerCallback();

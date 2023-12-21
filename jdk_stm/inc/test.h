@@ -27,6 +27,8 @@ public:
   //float _x, _z;
 
   void myCallBack(const tutorial_msgs::mydmxelConstPtr& msg);
+  void myCallBack_autorace(const tutorial_msgs::mydmxelConstPtr& msg);
+
   void Algorithm_Test();
 
   Serial *s;

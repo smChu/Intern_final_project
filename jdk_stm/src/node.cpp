@@ -12,6 +12,8 @@ Node::Node(int &argc, char **argv) : test(&s, &serialRead, &m, &readByte)
   ros::NodeHandle n;
 
   sub = n.subscribe("/hello", 10, &Test::myCallBack, &test);
+  sub_autorace = n.subscribe("/bye", 10, &Test::myCallBack_autorace, &test);
+
 
   // serial init
   s.setPort("/dev/" + portname);
