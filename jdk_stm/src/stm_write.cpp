@@ -49,6 +49,10 @@ void StmPacketGenerator::update_data(vector<uint8_t> &packet)
   divideByte(packet, ID_5, 2);
   divideByte(packet, ID_6, 2);
   cout << ID_1<< "//" << ID_2<< "//" << ID_3<< "//" << ID_5<< "//" << ID_6 << endl;
+  divideByte(packet, left_wheel, 2);
+  divideByte(packet, right_wheel, 2);
+  cout << left_wheel << "//" << right_wheel << endl
+       << endl;
 }
 
 void StmPacketGenerator::update_crc(vector<uint8_t> &data_blk_ptr)

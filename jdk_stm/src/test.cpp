@@ -25,6 +25,8 @@ void Test::myCallBack(const tutorial_msgs::mydmxelConstPtr& msg)
   stmPacketGenerator.ID_3 = msg->motor3;
   stmPacketGenerator.ID_5 = msg->motor4;
   stmPacketGenerator.ID_6 = msg->motor5;
+  stmPacketGenerator.left_wheel = msg->motor6;
+  stmPacketGenerator.right_wheel = msg->motor7;
 }
 
 void Test::Algorithm_Test()

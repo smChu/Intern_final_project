@@ -19,6 +19,8 @@ public:
   int ID_3=0;
   int ID_5=0;
   int ID_6=0;
+  int left_wheel=0;
+  int right_wheel=0;
   // 11/22
   
 
