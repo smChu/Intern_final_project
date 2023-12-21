@@ -40,17 +40,14 @@ void StmPacketGenerator::update_data(vector<uint8_t> &packet)
 {
   // Make your packet
 
-  // packet.push_back(_z);//left data[4]
-  // packet.push_back(_x);//right data[5]
-
   divideByte(packet, ID_1, 2);
   divideByte(packet, ID_2, 2);
   divideByte(packet, ID_3, 2);
   divideByte(packet, ID_5, 2);
   divideByte(packet, ID_6, 2);
   cout << ID_1<< "//" << ID_2<< "//" << ID_3<< "//" << ID_5<< "//" << ID_6 << endl;
-  divideByte(packet, left_wheel, 2);
-  divideByte(packet, right_wheel, 2);
+  packet.push_back(left_wheel);
+  packet.push_back(right_wheel);
   cout << left_wheel << "//" << right_wheel << endl
        << endl;
 }
