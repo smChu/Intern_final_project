@@ -9,11 +9,11 @@
 
 #include "header.h"
 
-#define DEVICENAME "/dev/DXL"
+#define DEVICENAME "/dev/ttyUSB0"
 #define PROTOCOL_VERSION 2.0
-#define BAUDRATE 1000000 //여기
+#define BAUDRATE 57600 //여기
 #define Hz 80
-#define NUMBER_OF_MOTORS 2// id 인가
+#define NUMBER_OF_MOTORS 2//
 
 #define OPERATING_MODE 1 //1 = position control, 2 = speed control
 
