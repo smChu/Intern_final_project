@@ -11,7 +11,7 @@
 
 #define DEVICENAME "/dev/ttyUSB0"
 #define PROTOCOL_VERSION 2.0
-#define BAUDRATE 57600 //여기
+#define BAUDRATE 1000000 //여기
 #define Hz 80
 #define NUMBER_OF_MOTORS 2//
 
@@ -69,9 +69,9 @@ int vel;
 PID pan;
 PID tilt;
 double pan_input = 0;
-double pan_target = 320;
+double pan_target = 240;
 double tilt_input = 0;
-double tilt_target = 230;//윈도우의 중앙값
+double tilt_target = 135;//윈도우의 중앙값
 
 mutex global_mutex;
 

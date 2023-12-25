@@ -22,7 +22,7 @@ void pantiltCallback(const geometry_msgs::Point::ConstPtr &msg)
     PID_Control(&tilt, tilt_target, tilt_input);
 
     goal_Position[0] += pan.output;
-    goal_Position[1] += -tilt.output;
+    goal_Position[1] += tilt.output;
 
     cout << "pan: " << goal_Position[0] << endl;
     cout << "tilt: " << goal_Position[1] << endl
