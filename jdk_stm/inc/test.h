@@ -5,6 +5,8 @@
 #include "stm_read.h"
 #include "stm_write.h"
 #include <tutorial_msgs/mydmxel.h>
+#include <std_msgs/Int32.h>
+
 
 
 class Test
@@ -25,9 +27,11 @@ public:
   ~Test();
 
   //float _x, _z;
+  int mode_flag = 1;
 
   void myCallBack(const tutorial_msgs::mydmxelConstPtr& msg);
   void myCallBack_autorace(const tutorial_msgs::mydmxelConstPtr& msg);
+  void myCallBack_mode(const std_msgs::Int32::ConstPtr& msg);
 
   void Algorithm_Test();
 

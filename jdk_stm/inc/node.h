@@ -25,6 +25,7 @@ private:
 
   ros::Subscriber sub;
   ros::Subscriber sub_autorace;
+  ros::Subscriber sub_mode;
 
   bool retry();
   void timerCallback();

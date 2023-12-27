@@ -13,6 +13,7 @@ Node::Node(int &argc, char **argv) : test(&s, &serialRead, &m, &readByte)
 
   sub = n.subscribe("/hello", 10, &Test::myCallBack, &test);
   sub_autorace = n.subscribe("/bye", 10, &Test::myCallBack_autorace, &test);
+  sub_mode = n.subscribe("/mode", 10, &Test::myCallBack_mode, &test);
 
 
   // serial init

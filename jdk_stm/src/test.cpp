@@ -14,23 +14,47 @@ Test::~Test()
 {
 
 }
+void Test::myCallBack_mode(const std_msgs::Int32::ConstPtr& msg)
+{
+  mode_flag = msg->data;
+}
 
 void Test::myCallBack(const tutorial_msgs::mydmxelConstPtr& msg)
 {
-  //-1~1 -> 0~200
-  // stmPacketGenerator._x = (int)(10 * (msg->linear.x + 1));
-  // stmPacketGenerator._z = (int)(10 * (msg->angular.z + 1));
-  stmPacketGenerator.ID_1 = msg->motor1;
-  stmPacketGenerator.ID_2 = msg->motor2;
-  stmPacketGenerator.ID_3 = msg->motor3;
-  stmPacketGenerator.ID_5 = msg->motor4;
-  stmPacketGenerator.ID_6 = msg->motor5;
+  if(mode_flag == 1)
+  {
+    stmPacketGenerator.ID_1 = msg->motor1;
+    stmPacketGenerator.ID_2 = msg->motor2;
+    stmPacketGenerator.ID_3 = msg->motor3;
+    stmPacketGenerator.ID_5 = msg->motor4;
+    stmPacketGenerator.ID_6 = msg->motor5;
+    
+    stmPacketGenerator.left_wheel = msg->L_wheel;
+    stmPacketGenerator.right_wheel = msg->R_wheel;
+  }
+  else if(mode_flag == 0)
+  {
+    stmPacketGenerator.ID_1 = msg->motor1;
+    stmPacketGenerator.ID_2 = msg->motor2;
+    stmPacketGenerator.ID_3 = msg->motor3;
+    stmPacketGenerator.ID_5 = msg->motor4;
+    stmPacketGenerator.ID_6 = msg->motor5;
+  }
+
 }
 
 void Test::myCallBack_autorace(const tutorial_msgs::mydmxelConstPtr& msg)
 {
-  stmPacketGenerator.left_wheel = msg->L_wheel;
-  stmPacketGenerator.right_wheel = msg->R_wheel;
+  if(mode_flag == 1)
+  {
+
+  }
+  else if (mode_flag == 0)
+  {
+    stmPacketGenerator.left_wheel = msg->L_wheel;
+    stmPacketGenerator.right_wheel = msg->R_wheel;
+  }
+
 }
 
 
