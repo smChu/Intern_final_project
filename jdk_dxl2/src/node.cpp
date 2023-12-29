@@ -4,7 +4,7 @@ void initCallback(const std_msgs::Bool::ConstPtr &msg)
 {
     if (msg->data == true)
     {
-        goal_Position[0] = 0;
+        goal_Position[0] = 3.7;
         goal_Position[1] = 0;
 
         controlFSM = INIT_WRITE;

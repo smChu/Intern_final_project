@@ -27,7 +27,7 @@ public:
   ~Test();
 
   //float _x, _z;
-  int mode_flag = 1;
+  int mode_flag = 0;
 
   void myCallBack(const tutorial_msgs::mydmxelConstPtr& msg);
   void myCallBack_autorace(const tutorial_msgs::mydmxelConstPtr& msg);

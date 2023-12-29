@@ -9,9 +9,9 @@
 
 #include "header.h"
 
-#define DEVICENAME "/dev/ttyUSB0"
+#define DEVICENAME "/dev/ttyUSB1"//pantilt dxl u2d2 portname, yellow molax pin
 #define PROTOCOL_VERSION 2.0
-#define BAUDRATE 1000000 //여기
+#define BAUDRATE 115200 //여기
 #define Hz 80
 #define NUMBER_OF_MOTORS 2//
 
